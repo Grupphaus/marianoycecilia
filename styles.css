@@ -1,8 +1,8 @@
 
 @font-face {
   font-family: 'absolute_pink';
-  src: url('/assets/absolute_pink_-_personal_use-webfont.woff2') format('woff2'),
-       url('/assets/absolute_pink_-_personal_use-webfont.woff') format('woff');
+  src: url('assets/absolute_pink_-_personal_use-webfont.woff2') format('woff2'),
+       url('assets/absolute_pink_-_personal_use-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 
@@ -50,21 +50,21 @@
 @keyframes slide {
   0% {
     opacity:1;
-    background-image: url('/assets/playa1.JPG');
+    background-image: url('assets/playa1.JPG');
   }
   25% {
     opacity:0;
   }
   50% {
     opacity:1;
-    background-image: url('/assets/playa2.jpeg');
+    background-image: url('assets/playa2.jpeg');
   }
   75% {
     opacity:0;
   }
   100% {
     opacity:1;
-    background-image: url('/assets/playa3.jpeg');
+    background-image: url('assets/playa3.jpeg');
   }
 }
 
@@ -176,7 +176,7 @@
     height: 275px;
     width: 275px;
     border-radius: 100%;
-    background-image: url('/assets/playa1.JPG');
+    background-image: url('assets/playa1.JPG');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 10% 50%;
