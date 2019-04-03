@@ -1,0 +1,283 @@
+
+@font-face {
+  font-family: 'absolute_pink';
+  src: url('/assets/absolute_pink_-_personal_use-webfont.woff2') format('woff2'),
+       url('/assets/absolute_pink_-_personal_use-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+@keyframes color-change {
+  0% {
+    color: #543a53;
+  }
+  25% {
+    color: #315542;
+  }
+  50% {
+    color: #20382c;
+  }
+  75% {
+    color: #7f587c
+  }
+  100% {
+    color: #543a53;
+  }
+}
+
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes up {
+  from {
+    top: 0;
+    opacity: 1;
+  }
+  to {
+    top: -100%;
+    opacity: 0;
+    display: none;
+  }
+}
+
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Document
+   ========================================================================== */
+
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+
+ html, body, div, span, applet, object, iframe,
+ h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+ a, abbr, acronym, address, big, cite, code,
+ del, dfn, em, img, ins, kbd, q, s, samp,
+ small, strike, strong, sub, sup, tt, var,
+ b, u, i, center,
+ dl, dt, dd, ol, ul, li,
+ fieldset, form, label, legend,
+ table, caption, tbody, tfoot, thead, tr, th, td,
+ article, aside, canvas, details, embed, 
+ figure, figcaption, footer, header, hgroup, 
+ menu, nav, output, ruby, section, summary,
+ time, mark, audio, video {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+ }
+  /* Sections
+     ========================================================================== */
+  
+  /**
+   * Remove the margin in all browsers.
+   */
+  
+  body {
+    margin: 0;
+  }
+  
+  #loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    font-size: 75px;
+    z-index: 999;
+    background: rgba(127,88,124,.4);
+  }
+
+  .bye {
+    animation: up 800ms cubic-bezier(0.47, 0, 0.745, 0.715) forwards;
+    animation-delay: 1.5s;
+  }
+
+  .loader img {
+    /* opacity: 0;
+    animation: opacity 500ms cubic-bezier(0.47, 0, 0.745, 0.715) forwards; */
+  }
+
+  .loader-text {
+    font-family: 'absolute_pink';
+    margin: 0;
+    position: absolute;
+    color: #543a53;
+    animation: opacity 500ms cubic-bezier(0.47, 0, 0.745, 0.715) forwards;
+    animation: color-change 1.3s linear infinite;
+  }
+
+  .loader-text h1 {
+    margin: 0;
+  }
+
+  .nos {
+    height: 55px;
+  }
+  
+  /**
+   * Render the `main` element consistently in IE.
+   */
+  
+  main {
+    display: block;
+  }
+
+  .intro {
+    padding: 50px 15px;
+  }
+
+  .intro .imagen {
+    height: 300px;
+    width: 300px;
+    border-radius: 100%;
+    background-image: url('/assets/playa1.JPG');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10% 50%;
+    box-shadow: inset 3px 2px 15px rgba(32,32,30,0.5);
+  }
+
+  .borde-foto {
+    height: 380px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  
+  /**
+   * Correct the font size and margin on `h1` elements within `section` and
+   * `article` contexts in Chrome, Firefox, and Safari.
+   */
+  
+  h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+  }
+
+  footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 65px;
+    box-shadow: 3px 2px 15px rgba(32,32,30,0.1);
+    z-index: 500;
+    background: #fdfdfc;
+    color: #6a4968;
+    opacity: .9;
+  }
+
+  .footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: 'Sanchez, serif';
+  }
+
+  .footer img {
+    height: 50px;
+    width: auto;
+    margin: -5px 0;
+  }
+
+  .footer h5 {
+    letter-spacing: 5px;
+  }
+  
+  /* Grouping content
+     ========================================================================== */
+  
+  /**
+   * 1. Add the correct box sizing in Firefox.
+   * 2. Show the overflow in Edge and IE.
+   */
+  
+  hr {
+    box-sizing: content-box; /* 1 */
+    height: 0; /* 1 */
+    overflow: visible; /* 2 */
+  }
+  
+  /**
+   * 1. Correct the inheritance and scaling of font size in all browsers.
+   * 2. Correct the odd `em` font sizing in all browsers.
+   */
+  
+  pre {
+    font-family: monospace, monospace; /* 1 */
+    font-size: 1em; /* 2 */
+  }
+  
+  /* Text-level semantics
+     ========================================================================== */
+  
+  /**
+   * Remove the gray background on active links in IE 10.
+   */
+  
+  a {
+    background-color: transparent;
+  }
+
+  /**
+   * Add the correct font weight in Chrome, Edge, and Safari.
+   */
+  
+  b,
+  strong {
+    font-weight: bolder;
+  }
+  
+  /* Embedded content
+     ========================================================================== */
+  
+  /**
+   * Remove the border on images inside links in IE 10.
+   */
+  
+  img {
+    border-style: none;
+  }
+  
+  /* Misc
+     ========================================================================== */
+
+  /**
+   * Add the correct display in IE 10.
+   */
+  
+  [hidden] {
+    display: none;
+  }
+
+  .noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
+  }
