@@ -38,6 +38,7 @@
 @keyframes up {
   from {
     top: 0;
+    display: flex;
   }
   to {
     top: -100%;
@@ -480,6 +481,9 @@
     }
     h2.noselect.confirmar {
       font-size: 3em;
+    }
+    #loader img {
+      height: 50% !important;
     }
   }
 
