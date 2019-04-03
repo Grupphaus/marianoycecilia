@@ -162,6 +162,11 @@
     margin-bottom: 75px;
   }
 
+  .novios {
+    word-spacing: 15px;
+    letter-spacing: 15px;
+  }
+
   .intro {
     padding: 50px 0 25px 0;
     width: 85%;
@@ -269,7 +274,7 @@
   }
 
   .footer h5 {
-    letter-spacing: 5px;
+    letter-spacing: 15px;
   }
   
   /* Grouping content
