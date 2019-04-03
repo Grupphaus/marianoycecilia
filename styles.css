@@ -41,7 +41,7 @@
     display: flex;
   }
   to {
-    top: -100%;
+    top: -150%;
     display: none;
   }
 }
