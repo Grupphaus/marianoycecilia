@@ -38,11 +38,9 @@
 @keyframes up {
   from {
     top: 0;
-    opacity: 1;
   }
   to {
     top: -100%;
-    opacity: 0;
     display: none;
   }
 }
@@ -56,15 +54,15 @@
     opacity:0;
   }
   50% {
-    opacity:1;
     background-image: url('assets/playa2.jpeg');
+    opacity:1;
   }
   75% {
     opacity:0;
   }
   100% {
-    opacity:1;
     background-image: url('assets/playa3.jpeg');
+    opacity:1;
   }
 }
 
@@ -72,11 +70,6 @@
 
 /* Document
    ========================================================================== */
-
-/**
- * 1. Correct the line height in all browsers.
- * 2. Prevent adjustments of font size after orientation changes in iOS.
- */
 
  html, body, div, span, applet, object, iframe,
  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -100,10 +93,6 @@
  }
   /* Sections
      ========================================================================== */
-  
-  /**
-   * Remove the margin in all browsers.
-   */
   
   body {
     background: #fdfdfc; 
@@ -168,7 +157,7 @@
   }
 
   .intro {
-    padding: 50px 0 25px 0;
+    padding: 60px 0 25px 0;
     width: 85%;
   }
 
@@ -179,14 +168,13 @@
     background-image: url('assets/playa1.JPG');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 10% 50%;
     box-shadow: inset 3px 2px 15px rgba(32,32,30,0.5);
-    animation: slide 18s cubic-bezier(0.445, 0.05, 0.55, 0.95) alternate infinite;
+    animation: slide 9s cubic-bezier(0.445, 0.05, 0.55, 0.95) alternate infinite;
   }
 
   .intro-text {
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    padding: 15px 35px 50px 35px;
+    padding: 15px 35px 35px 35px;
     margin: 35px 0;
     width: 45%;
   }
@@ -214,12 +202,27 @@
   .fecha {
     width: max-content;
     padding: 15px;
-    box-shadow: 0 1px 1px rgba(90,90,90,.1), 0 1px 4px rgba(90,90,90,0.2);
-    border-radius: 4px;
+    font-family: 'Fjalla One', sans-serif !important;
+    font-size: 2em !important;
+  }
+
+  .banco {
+    font-family: 'Fjalla One', sans-serif !important;
+    font-size: 1.5em;
+    letter-spacing: 3px;
+  }
+
+  .banco:first-of-type {
+    padding: 10px;
   }
 
   .confirmar {
     animation: color-change 2s linear infinite alternate;
+    height: 75px;
+  }
+
+  .nombres {
+    margin: 0 1.5em;
   }
 
   #map {
@@ -360,3 +363,123 @@
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
   }
+
+  @media screen and (max-width:1024px) {
+    .intro-text {
+      width: 70%;
+      padding: 25px;
+      margin: 35px 0 0 0;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .intro-text img {
+      width: 30px;
+    }
+
+    .intro-text h2 {
+      font-size: 5em;
+      margin: 15px;
+    }
+
+    .intro-text .p-up {
+      font-size: 1.4em;
+    }
+
+    .footer img {
+      height: 35px;
+    }
+
+    .footer h5 {
+      letter-spacing: 10px;
+    }
+  }
+
+  @media screen and (max-width:480px) {
+    .intro-text {
+      width: 100%;
+      padding: 15px;
+    }
+
+    div.intro-text:first-of-type {
+      margin: 30px 0 !important;
+    }
+
+    .intro-text h2 {
+      font-size: 4em;
+      margin: 15px;
+    }
+
+    .intro-text p {
+      font-size: 1.2em;
+    }
+
+    .intro-text .p-up {
+      font-size: 1.25em;
+    }
+
+    .footer h5 {
+      letter-spacing: 2px;
+    }
+
+    .footer img {
+      height: 25px;
+      margin: 0 !important;
+    }
+
+    .nombres {
+      margin: 0 10px;
+    }
+  }
+
+  @media screen and (max-width:375px) {
+    h2.noselect.confirmar {
+      height:65px;
+      font-size: 3.5em;
+    }
+    .intro-text p {
+      font-size: 1.1em;
+    }
+    .intro-text .p-up {
+      font-size: 1.1em;
+    }
+    .footer img {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width:320px) {
+    .container {
+      padding: 0;
+    }
+    .intro .imagen {
+      height: 245px;
+      width: 245px; 
+    }
+    .borde-foto {
+      height: 310px;
+    }
+    .fecha {
+      font-size: 1.3em !important;
+    }
+    .intro-text {
+      margin: 10px 0 0 0;
+      box-shadow: none;
+    }
+    .intro-text h2 {
+      margin: 10px 0;
+    }
+    .intro-text p {
+      font-size: 1em;
+    }
+    .intro-text .p-up {
+      font-size: 1em;
+    }
+    .fecha {
+      padding: 10px;
+    }
+    h2.noselect.confirmar {
+      font-size: 3em;
+    }
+  }
+
