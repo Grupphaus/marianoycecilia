@@ -226,13 +226,6 @@
     margin: 0 1.5em;
   }
 
-  #map {
-    width: 250px;
-    height: 250px;
-    border: 1px solid red;
-    margin: 35px;
-  }
-
   .borde-foto {
     height: 350px;
     position: absolute;
