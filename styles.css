@@ -119,6 +119,10 @@
     margin-bottom: 75px;
   }
 
+  main * {
+    transition: all 200ms ease;
+  }
+
   .novios {
     word-spacing: 15px;
     letter-spacing: 15px;
@@ -148,7 +152,12 @@
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     padding: 15px 35px 35px 35px;
     margin: 35px 0;
-    width: 45%;
+    width: 100%;
+  }
+
+  .intro-text:last-of-type {
+    box-shadow: none;
+    width: 100%;
   }
 
   .intro-text h2 {
@@ -158,13 +167,13 @@
   }
 
   .intro-text p {
-    font-family: 'Sanchez, sans-serif';
+    font-family: 'Sanchez';
     font-size: 1.3em;
     opacity: .8;
   }
 
   .intro-text .p-up {
-    font-size: 1.6em;
+    font-size: 1.25em;
   }
 
   .intro-text img {
@@ -173,7 +182,6 @@
 
   .fecha {
     width: max-content;
-    padding: 15px;
     font-family: 'Fjalla One', sans-serif !important;
     font-size: 2em;
     margin: 0;
@@ -199,6 +207,31 @@
     height: 350px;
     position: absolute;
   }
+
+  footer {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    height: 75px;
+    box-shadow: 3px 2px 15px rgba(32,32,30,0.1);
+    z-index: 500;
+    background: #fafaf0;
+    color: #6a4968;
+    opacity: 0;}
+.footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    font-family: 'Sanchez';}
+.footer img {
+    height: 50px;
+    width: auto;
+    margin: -5px 0;
+    opacity: .65;}
+.footer h5 {letter-spacing: 15px;}
   
   /**
    * Correct the font size and margin on `h1` elements within `section` and
@@ -295,14 +328,6 @@
   }
 
   @media screen and (max-width:1024px) {
-    .intro-text {
-      width: 70%;
-      padding: 25px;
-      margin: 35px 0 0 0;
-    }
-  }
-
-  @media screen and (max-width:768px) {
     .intro-text img {
       width: 30px;
     }
@@ -312,10 +337,6 @@
       margin: 15px;
     }
 
-    .intro-text .p-up {
-      font-size: 1.4em;
-    }
-
     .footer img {
       height: 35px;
     }
@@ -323,12 +344,10 @@
     .footer h5 {
       letter-spacing: 10px;
     }
-  }
 
-  @media screen and (max-width:480px) {
     .intro-text {
-      width: 100%;
-      padding: 15px;
+      padding: 8px;
+      margin: 35px 0 0 0;
     }
 
     div.intro-text:first-of-type {
@@ -373,7 +392,7 @@
     }
   }
 
-  @media screen and (max-width:375px) {
+  @media screen and (max-width:440px) {
     .intro-text p {
       font-size: 1.1em;
     }
@@ -381,8 +400,7 @@
       font-size: 1.1em;
     }
     .fecha {
-      font-size: 1.15em !important;
-      padding: 10px;
+      font-size: 1.5em !important;
     }
     .container {
       padding: 0;
@@ -396,15 +414,16 @@
     }
     .intro-text {
       box-shadow: none;
+      margin: 0;
     }
     .intro-text h2 {
       margin: 10px 0;
     }
     .intro-text p {
-      font-size: 1em;
+      font-size: .9em;
     }
     .intro-text .p-up {
-      font-size: 1em;
+      font-size: .9em;
     }
     h2.noselect.confirmar {
       font-size: 3em;
