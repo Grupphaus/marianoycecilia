@@ -208,11 +208,12 @@
             animation: slide 9s cubic-bezier(0.445, 0.05, 0.55, 0.95) alternate infinite;
     -webkit-animation-delay: 4s;
             animation-delay: 4s;
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    background-color: #fdfdfc;
-    border: 1px solid transparent;
-    transform: translate3d(0px,0px,0px);
+            background-color: #fdfdfc;
+            border: 1px solid transparent;
+            transform: translateZ(0);
+            -webkit-transform: translateZ(0);
+            transform: translate3d(0,0,0);
+            -webkit-backface-visibility: hidden;
   }
 
   .intro-text {

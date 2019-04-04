@@ -25,7 +25,11 @@
                 height: 100vh;
                 font-size: 75px;
                 z-index: 999;
-                background: rgba(222,222,141, .2);}
+                background: rgba(222,222,141, .2);
+                transform: translateZ(0);
+                -webkit-transform: translateZ(0);
+                transform: translate3d(0,0,0);
+                -webkit-backface-visibility: hidden;}
             .loader-text {
                 font-family: 'absolute_pink';
                 margin: 0;
