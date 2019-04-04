@@ -219,7 +219,7 @@
   .intro-text {
     -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
             box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    padding: 15px 35px 35px 35px;
+    padding: 0 35px .5rem 35px;
     margin: 35px 0;
     width: 100%;
   }
@@ -237,7 +237,7 @@
   }
 
   #lugar, #fiesta, #regalo {
-    padding-top: 1.5rem;
+    padding-top: .5rem;
   }
 
   .intro-text p {
@@ -253,7 +253,7 @@
   .intro-text img {
     width: 35px;
   }
-  
+
   .fecha {
     width: -webkit-max-content;
     width: -moz-max-content;
