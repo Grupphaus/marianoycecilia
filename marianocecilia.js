@@ -1,8 +1,4 @@
 window.onload = () => {
-    setTimeout(function(){
-        // This hides the address bar:
-        window.scrollTo(0, 1);
-    }, 0);
     setTimeout(() => {
         document.getElementById('loader').classList.add('bye');
         document.getElementById('main').classList.add('hello');
@@ -11,5 +7,5 @@ window.onload = () => {
     setTimeout(() => {
         var elem = document.querySelector('#loader');
         elem.parentNode.removeChild(elem);
-    }, 5000);
+    }, 6000);
 }
