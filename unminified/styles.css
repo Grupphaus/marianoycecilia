@@ -278,6 +278,14 @@
     position: absolute;
   }
 
+  .guita {
+    padding: 0 15px;
+  }
+
+  .intro-text .detalle-guita {
+    font-size: .9em;
+  }
+
   footer {
     position: fixed;
     width: 100%;
@@ -305,6 +313,7 @@
 .personajes {
   position: absolute;
   padding: 0 50px;
+  height: 15px;
 }
 
 .personajes img {
@@ -387,8 +396,8 @@
     transition: all 200ms ease-in-out;
   }
 
-  a:hover {
-    color: #ad3f1d;
+  a {
+    color: #1460aa !important;
   }
 
   /**
@@ -543,10 +552,25 @@
     .container {
       margin-bottom: 150px;
     }
+
+    .intro-text .detalle-guita {
+      font-size: .6em;
+    }
   }
 
   @media screen and (max-width:375px) {
     #footer {
       height: 0;
+    }
+
+    .intro .imagen {
+      height: 175px;
+      width: 175px; 
+    }
+    .borde-foto {
+      height: 223px;
+    }
+    .intro-text:first-of-type {
+      margin-top: 0 !important;
     }
   }
