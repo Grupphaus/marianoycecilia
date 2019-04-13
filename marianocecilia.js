@@ -32,7 +32,7 @@
                 var clock = document.getElementById('clock');
                 var timeinterval = setInterval(function () {
                         var t = getTimeRemaining(deadline);
-                        clock.innerHTML = t.days + ' DÍAS ' +
+                        clock.innerHTML = t.days + ' DÍAS ' + '<br>' +
                                 t.hours + ' : ' +
                                 t.minutes + ' : ' +
                                 t.seconds;
