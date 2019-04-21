@@ -1,4 +1,21 @@
-(function () {
+$('window').ready(() => {
+
+        $("#loader").animate({
+                opacity: 1
+        })
+        $(".btn").click(function (e) { 
+                e.preventDefault();
+                
+                $(".loader-main").animate({
+                        opacity: 0
+                }, 300, () => {
+                        $("#loader").slideUp(800, () => {
+                                $("#main").animate({
+                                        opacity: 1
+                                }, 500)        
+                        });
+                })
+        });
 
         function zeros(i) {
                 if (i < 10) {
@@ -7,7 +24,7 @@
                 return i;
                 }
 
-        let deadline = ('November 09 2019 20:15:00 GMT-3');
+        let deadline = ('November 09 2019 20:30:00 GMT-3');
         let daysSpan = clock.querySelector('.days');
         let hoursSpan = clock.querySelector('.hours');
         let minutesSpan = clock.querySelector('.minutes');
@@ -32,7 +49,7 @@
                 var clock = document.getElementById('clock');
                 var timeinterval = setInterval(function () {
                         var t = getTimeRemaining(deadline);
-                        clock.innerHTML = t.days + ' DÍAS ' + '<br>' +
+                        clock.innerHTML = 'FALTAN ' + t.days + ' DÍAS ' + '<br>' +
                                 t.hours + ' : ' +
                                 t.minutes + ' : ' +
                                 t.seconds;
@@ -52,10 +69,88 @@
                         clearInterval(timeinterval);
                 }
         }
-
+        
+        initializeClock('clockdiv', deadline);
         updateClock();
         let timeinterval = setInterval(updateClock, 1000);
 
+        $(".loader-text").delay(500).animate({
+                opacity: 1
+        })
 
-        initializeClock('clockdiv', deadline);
-}());
+        $(".clock").delay(1000).animate({
+                opacity: 1,
+        }, 400);
+
+        $(".btn").delay(1000).animate({
+                opacity: 1
+        }, 400);
+
+        $("#button-to-fiesta").click(() => {
+                $('html, body').animate({
+                        scrollTop: $("#fiesta-wrapper").offset().top
+                    }, 800);
+        })
+
+        $("#button-to-lugar").click(() => {
+                $('html, body').animate({
+                        scrollTop: 0
+                    }, 800);
+        })
+
+        $("#button-to-fiesta-bot").click(() => {
+                $('html, body').animate({
+                        scrollTop: $("#fiesta-wrapper").offset().top
+                    }, 800);
+        })
+
+        $("#button-to-regalo").click(() => {
+                $('html, body').animate({
+                        scrollTop: $("#regalo-wrapper").offset().top
+                    }, 800);
+        })
+
+        $("#button-to-top").click(() => {
+                $('html, body').animate({
+                        scrollTop: 0
+                    }, 800);
+        })
+
+        var keys = [32,33,34,35,36,37,38,39,40];
+
+function preventDefault(e) {
+  e = e || window.event;
+  if (e.preventDefault)
+      e.preventDefault();
+  e.returnValue = false;  
+}
+
+function keydown(e) {
+    for (var i = keys.length; i--;) {
+        if (e.keyCode === keys[i]) {
+            preventDefault(e);
+            return;
+        }
+    }
+}
+
+function wheel(e) {
+  preventDefault(e);
+}
+
+function disable_scroll() {
+  if (window.addEventListener) {
+      window.addEventListener('DOMMouseScroll', wheel, false);
+  }
+  window.onmousewheel = document.onmousewheel = wheel;
+  document.onkeydown = keydown;
+  disable_scroll_mobile();
+}
+
+// MOBILE
+function disable_scroll_mobile(){
+  document.addEventListener('touchmove',preventDefault, false);
+}
+
+disable_scroll();
+}); 

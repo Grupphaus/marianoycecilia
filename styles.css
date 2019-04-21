@@ -5,42 +5,6 @@
     font-style: normal;
 }
 
-@-webkit-keyframes opacity {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes opacity {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@-webkit-keyframes gone {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
-@keyframes gone {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
 @-webkit-keyframes slide {
     0% {
         opacity: 1;
@@ -65,7 +29,7 @@
 @keyframes slide {
     0% {
         opacity: 1;
-        background-image: url('assets/playa1.JPG');
+        background-image: url('assets/playa1-edit.JPG');
     }
     25% {
         opacity: 0;
@@ -80,6 +44,16 @@
     100% {
         background-image: url('assets/playa3.jpeg');
         opacity: 1;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
     }
 }
 
@@ -201,12 +175,11 @@ body {
 main {
     display: block;
     opacity: 0;
-    margin-bottom: 75px;
 }
 
 .divisor {
-    width: 200px;
-    opacity: .5;
+    height: 50px;
+    width: 50%;
 }
 
 .novios {
@@ -214,17 +187,27 @@ main {
     letter-spacing: 15px;
 }
 
+.wrapper {
+    height: 100vh;
+}
+
 .intro {
-    padding: 55px 0 35px 0;
+    padding: 45px 0 35px 0;
     width: 85%;
+    /* position: fixed;
+    top: 0;
+    overflow: hidden;
+    background: #fdfdfc;
+    z-index: 5; */
 }
 
 .intro .imagen {
-    height: 275px;
-    width: 275px;
+    height: 250px;
+    width: 250px;
     border-radius: 100%;
-    background-image: url('assets/playa1.JPG');
+    background-image: url('assets/playa1-edit.JPG');
     background-size: cover;
+    background-position: center;
     -webkit-animation: slide 9s cubic-bezier(0.445, 0.05, 0.55, 0.95) alternate infinite;
     animation: slide 9s cubic-bezier(0.445, 0.05, 0.55, 0.95) alternate infinite;
     -webkit-animation-delay: 4s;
@@ -238,9 +221,8 @@ main {
 }
 
 .intro-text {
-    padding: 0 35px .5rem 35px;
-    margin: 35px 0;
     width: 100%;
+    height: 100vh;
 }
 
 div.intro-text:first-of-type {
@@ -275,12 +257,70 @@ div.intro-text:first-of-type {
 
 .clock {
     font-family: 'Fjalla One', sans-serif;
-    align-self: flex-end;
+    align-self: center;
     color: #fdfdfc;
     text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
     0px 8px 13px rgba(0,0,0,0.1),
     0px 18px 23px rgba(0,0,0,0.1);
-    font-size: .75em;
+    font-size: .6em;
+    position: absolute;
+    opacity: 0;
+    padding: 25px;
+    width: 100%;
+    background: rgba(29,29,29,.2);
+}
+
+.btn {
+    align-self: flex-end;
+    font-family: 'Fjalla One', sans-serif;
+    color: #292929;
+    background-color: #fdfdfc;
+    opacity: 0;
+    width: 200px;
+}
+
+.btn * {
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translate3d(0, 0, 0);
+}
+
+.btn:hover {
+    background-color: #68848a;
+    color: #fdfdfc;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.btn:focus {
+    box-shadow: none;
+}
+
+.btn-next {
+    align-self: center;
+    font-family: 'Fjalla One', sans-serif;
+    background-color: #68848a;
+    color: #fdfdfc;
+    padding: 15px;
+    width: 200px;
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+
+.reverse {
+    border-radius: 0 0 4px 4px;
+}
+
+.btn-next i {
+    font-size: .7em;
+}
+
+.fas .fa-angle-double-up {
+    font-size: 1.5em;
+}
+
+#button-to-top {
+    padding: 18px;
 }
 
 .fecha {
@@ -308,8 +348,9 @@ div.intro-text:first-of-type {
 }
 
 .borde-foto {
-    height: 350px;
+    height: 315px;
     position: absolute;
+    animation: rotate 60s linear forwards infinite;
 }
 
 .guita {
@@ -324,13 +365,12 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
-    height: 65px;
+    height: 0px;
     -webkit-box-shadow: 3px 2px 15px rgba(32, 32, 30, 0.1);
     box-shadow: 3px 2px 15px rgba(32, 32, 30, 0.1);
     z-index: 500;
     background: #fafaf0;
     color: #6a4968;
-    opacity: 0;
 }
 
 .footer {
@@ -353,7 +393,7 @@ footer {
 .personajes {
     position: absolute;
     padding: 0 50px;
-    height: 15px;
+    height: 0px;
 }
 
 .personajes img {
@@ -361,7 +401,7 @@ footer {
 }
 
 .personajes img:last-of-type {
-    width: 145px;
+    width: 140px;
 }
 
 
@@ -496,12 +536,6 @@ img {
     .footer h5 {
         letter-spacing: 10px;
     }
-    .intro-text {
-        padding: 8px;
-    }
-    div.intro-text:first-of-type {
-        margin: 30px 0 !important;
-    }
     .intro-text h2 {
         font-size: 4em;
         margin: 0;
@@ -519,12 +553,6 @@ img {
     }
     .fecha {
         font-size: 1.7em;
-    }
-    .divisor {
-        width: 150px;
-    }
-    .divisor img {
-        width: 100%;
     }
 }
 

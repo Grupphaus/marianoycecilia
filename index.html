@@ -19,19 +19,17 @@
             opacity: 0;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
             flex-direction: column;
             width: 100%;
             height: 100vh;
             font-size: 75px;
             z-index: 999;
-            animation: opacity 1s cubic-bezier(0.47, 0, 0.745, 0.715) forwards;
-            animation-delay: 1s;
             transform: translateZ(0);
             -webkit-transform: translateZ(0);
             transform: translate3d(0, 0, 0);
             -webkit-backface-visibility: hidden;
-            background-image: linear-gradient(#292929, #323232), url('assets/playa1.jpg');
+            background-image: url('assets/playa1.JPG');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
@@ -40,10 +38,16 @@
 
         .loader-main {
             height: 90%;
-            width: 65%;
-            padding: 25px;
+            width: 50%;
+            padding: 20px;
             position: absolute;
             background-color: rgba(32,32,32,.4);
+            background: url('assets/playa1-edit.JPG');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            border-radius: 16px 16px 0 0;
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
         }
         
         .loader-main .loader-text {
@@ -82,11 +86,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Sanchez:400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css"> </head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+</head>
 
 <body>
     <!--[if lt IE 7]> <p class="browsehappy">Está usando un navegador <strong>desactualizado</strong>. Por favor, <a href="https://www.google.com/chrome/">actualice su navegador</a> para poder continuar.</p><![endif]-->
-    <div id="loader" class="loader">
+    <div id="loader" class="loader noselect">
         <div class="loader-main d-flex justify-content-center align-items-start">
             <div class="loader-text">
                 <img src="assets/hojas-a.svg" alt="">
@@ -94,45 +100,55 @@
                 <!-- <h3 class="reservate">Reservate la fecha</h3>  -->
             </div>
             <div id="clock" class="clock d-flex align-items-center justify-content-center text-center">
-                    <div class="days"></div><br>
-                    <div class="hours"></div><br>
-                    <div class="minutes"></div><br>
-                    <div class="seconds"></div>
+                <div class="days"></div><br>
+                <div class="hours"></div><br>
+                <div class="minutes"></div><br>
+                <div class="seconds"></div>
             </div>
-        </div>    
+            <button class="btn mb-4"><p>Ver información</p></button>  
+        </div>  
     </div>
     <main id="main">
         <div class="container d-flex flex-column justify-content-center align-items-center">
-            <div class="intro d-flex d-column justify-content-center align-items-center">
-                <div id="imagen" class="imagen d-flex align-items-center justify-content-center"> </div><img class="borde-foto" src="assets/borde-foto.svg" alt=""> </div>
-            <div class="intro-text text-center d-flex flex-column justify-content-center align-items-center">
-                <h2 id="lugar" class="noselect"><img src="assets/hojai.svg" alt=""> Lugar y Fecha <img src="assets/hojad.svg" alt=""></h2>
-                <p class="p-up"><a href="https://www.google.com/maps/place/Parroquia+Santuario+San+Ram%C3%B3n+Nonato/@-34.6279912,-58.5015355,15z/data=!4m5!3m4!1s0x0:0xf743321f166ea581!8m2!3d-34.6279912!4d-58.5015355" target="_blank"> Parroquia <span class="font-italic">Santuario San Ramón Nonato</span></a></p>
-                <p class="mb-4">(Cervantes 1150, Capital Federal)</p>
-                <h1 class="fecha">09 · NOV · 2019 <span class="ml-2 mr-2">|</span> 20:30</h1> </div>
-            <div class="divisor d-flex justify-content-center align-items-center"> <img class="m-4" src="assets/divisor.svg" alt=""> </div>
-            <div class="intro-text text-center d-flex flex-column justify-content-center align-items-center">
-                <h2 id="fiesta" class="noselect"> La Fiesta </h2>
-                <p class="p-up"><a href="https://www.espaciomarquez.com.ar/"><span class="font-italic">Espacio Márquez</span></a></p>
-                <p>(Av. Bernabé Márquez 700, San Isidro)</p>
+            <div id="main-wrapper" class="wrapper d-flex flex-column align-items-center justify-content-center">
+                <div class="intro d-flex d-column justify-content-center align-items-center">
+                    <div id="imagen" class="imagen d-flex align-items-center justify-content-center"> </div><img class="borde-foto" src="assets/borde-foto.svg" alt=""> </div>
+                <div class="intro-text text-center d-flex flex-column justify-content-center align-items-center">
+                    <h2 id="lugar" class="noselect"><img src="assets/hojai.svg" alt=""> Lugar y Fecha <img src="assets/hojad.svg" alt=""></h2>
+                    <p class="p-up font-weight-bold"><a href="https://www.google.com/maps/place/Parroquia+Santuario+San+Ram%C3%B3n+Nonato/@-34.6279912,-58.5015355,15z/data=!4m5!3m4!1s0x0:0xf743321f166ea581!8m2!3d-34.6279912!4d-58.5015355" target="_blank"> Parroquia <span class="font-italic">Santuario San Ramón Nonato</span></a></p>
+                    <p class="mb-4">(Cervantes 1150, Capital Federal)</p>
+                    <h1 class="fecha">09 · NOV · 2019 <span class="ml-2 mr-2">|</span> 20:30</h1>
+                </div>
+                <button id="button-to-fiesta" class="btn btn-next m-0 d-flex flex-column align-items-center">Fiesta<i class="fas fa-chevron-down m-0"></i></button>
             </div>
-            <div class="divisor d-flex justify-content-center align-items-center"> <img class="m-4" src="assets/divisor.svg" alt=""> </div>
-            <div class="intro-text text-center d-flex flex-column justify-content-center align-items-center">
-                <h2 id="regalo" class="noselect"> El Regalo </h2>
-                <p class="guita">Como nuestra <i class="fas fa-home"></i> ya tiene <i class="fas fa-couch"></i> <i class="fas fa-blender"></i> <i class="fas fa-tv"></i> <i class="fas fa-chair"></i></p>
-                <p class="guita mb-4">si nos quieren <i class="fas fa-gift"></i> algo, nuestro deseo sería <i class="fas fa-dollar-sign"></i> para poder <i class="fas fa-umbrella-beach"></i></p>
-                <p class="banco font-weight-bold">BANCO NACIÓN</p>
-                <p class="mb-1">Caja de Ahorro : 91010530327114</p>
-                <p class="mb-1">CBU : 0110053230005303271147</p>
-                <p class="mb-1">Alias : marianololo</p>
-                <p>CUIT : 20341177368</p>
-                </p>
-                <p class="guita detalle-guita mt-4 font-italic">Para los colgados: También habrá un buzón en el salón!</p>
+            <div class="divisor d-flex justify-content-center align-items-center"></div>
+            <div id="fiesta-wrapper" class="intro-text text-center d-flex flex-column justify-content-around align-items-center">
+                <button id="button-to-lugar" class="btn btn-next reverse m-0 d-flex flex-column align-items-center"><i class="fas fa-chevron-up m-0"></i>Lugar y Fecha</button>
+                <div class="mt-4 mb-4 h-75 d-flex align-items-center justify-content-center flex-column">
+                    <h2 id="fiesta" class="noselect"><img class="mr-3" src="assets/hojai.svg" alt=""> La Fiesta <img class="ml-3" src="assets/hojad.svg" alt=""></h2>
+                    <p class="p-up font-weight-bold"><a href="https://www.espaciomarquez.com.ar/"><span class="font-italic">Espacio Márquez</span></a></p>
+                    <p>(Av. Bernabé Márquez 700, San Isidro)</p>
+                    <h1 class="fecha mt-4">CONFIRMAR ASISTENCIA</h1>
+                </div>
+                <button id="button-to-regalo" class="btn btn-next m-0 d-flex flex-column align-items-center">Regalo<i class="fas fa-chevron-down m-0"></i></button>
             </div>
-            <div class="divisor d-flex justify-content-center align-items-center"> <img class="m-4" src="assets/divisor.svg" alt=""> </div>
-            <div class="intro-text text-center d-flex flex-column justify-content-center align-items-center">
-                <h2 class="noselect confirmar d-flex justify-content-center align-items-center"><img class="mr-3" src="assets/hojai.svg" alt=""> Confirmar Asistencia <img class="ml-3" src="assets/hojad.svg" alt=""></h2> </div>
-        </div>
+            <div class="divisor d-flex justify-content-center align-items-center"></div>
+            <div id="regalo-wrapper" class="intro-text text-center d-flex flex-column justify-content-around align-items-center">
+                <button id="button-to-fiesta-bot" class="btn btn-next reverse m-0 d-flex flex-column align-items-center"><i class="fas fa-chevron-up m-0"></i>Fiesta</button>
+                    <div class="mt-4 mb-4 h-75 d-flex align-items-center justify-content-center flex-column">
+                    <h2 id="regalo" class="noselect"> El Regalo </h2>
+                    <p class="guita">Como nuestra <i class="fas fa-home"></i> ya tiene <i class="fas fa-couch"></i> <i class="fas fa-blender"></i> <i class="fas fa-tv"></i> <i class="fas fa-chair"></i></p>
+                    <p class="guita mb-4">si nos quieren <i class="fas fa-gift"></i> algo, nuestro deseo sería <i class="fas fa-dollar-sign"></i> para poder <i class="fas fa-umbrella-beach"></i></p>
+                    <p class="banco font-weight-bold">BANCO NACIÓN</p>
+                    <p class="mb-1">Caja de Ahorro : 91010530327114</p>
+                    <p class="mb-1">CBU : 0110053230005303271147</p>
+                    <p class="mb-1">Alias : marianololo</p>
+                    <p>CUIT : 20341177368</p>
+                    </p>
+                    <p class="guita detalle-guita mt-4 font-italic">Para los colgados: También habrá un buzón en el salón!</p>
+                </div>
+                <button id="button-to-top" class="btn btn-next m-0"><i class="fas fa-angle-double-up"></i></button>
+            </div>
     </main>
     <footer id="footer">
         <div class="footer noselect">
