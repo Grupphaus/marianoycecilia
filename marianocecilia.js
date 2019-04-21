@@ -12,6 +12,9 @@ $('window').ready(() => {
                         $("#loader").slideUp(800, () => {
                                 $("#main").animate({
                                         opacity: 1
+                                }, 500)
+                                $("footer").animate({
+                                        opacity: 1
                                 }, 500)        
                         });
                 })
@@ -133,24 +136,4 @@ function keydown(e) {
         }
     }
 }
-
-function wheel(e) {
-  preventDefault(e);
-}
-
-function disable_scroll() {
-  if (window.addEventListener) {
-      window.addEventListener('DOMMouseScroll', wheel, false);
-  }
-  window.onmousewheel = document.onmousewheel = wheel;
-  document.onkeydown = keydown;
-  disable_scroll_mobile();
-}
-
-// MOBILE
-function disable_scroll_mobile(){
-  document.addEventListener('touchmove',preventDefault, false);
-}
-
-disable_scroll();
 }); 

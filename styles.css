@@ -225,8 +225,9 @@ main {
     height: 100vh;
 }
 
-div.intro-text:first-of-type {
-    margin-top: 1.5rem;
+#first {
+    height: 50%;
+    margin-bottom: 3.5rem;
 }
 
 .intro-text:last-of-type {
@@ -371,6 +372,7 @@ footer {
     z-index: 500;
     background: #fafaf0;
     color: #6a4968;
+    opacity: 0;
 }
 
 .footer {
@@ -392,7 +394,7 @@ footer {
 
 .personajes {
     position: absolute;
-    padding: 0 50px;
+    padding: 0 55px 0 20px;
     height: 0px;
 }
 
