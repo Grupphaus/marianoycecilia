@@ -1,17 +1,17 @@
-screen.orientation.lock("portrait");
+screen.orientation.lock('portrait');
 
 $('window').ready(() => {
 
-        let buttonLugar = $("#button-to-lugar");
-        let buttonFiesta = $("#button-to-fiesta");
-        let buttonFiestaBot = $("#button-to-fiesta-bot");
-        let buttonRegalo = $("#button-to-regalo");
-        let buttonTop = $("#button-to-top");
+        let buttonLugar = $('#button-to-lugar');
+        let buttonFiesta = $('#button-to-fiesta');
+        let buttonFiestaBot = $('#button-to-fiesta-bot');
+        let buttonRegalo = $('#button-to-regalo');
+        let buttonTop = $('#button-to-top');
         let vh = window.innerHeight * 0.01;
         // Then we set the value in the --vh custom property to the root of the document
         document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-        $("#loader").animate({
+        $('#loader').animate({
                 opacity: 1
         }, 600)
 
@@ -19,17 +19,17 @@ $('window').ready(() => {
                 scrollTop: 0
         }, 400);    
 
-        $(".btn").click(function (e) { 
+        $('.btn').click(function (e) { 
                 e.preventDefault();
                 
-                $(".loader-main").animate({
+                $('.loader-main').animate({
                         opacity: 0
                 }, 400, () => {
-                        $("#loader").slideUp(800, () => {
-                                $("#main").animate({
+                        $('#loader').slideUp(800, () => {
+                                $('#main').animate({
                                         opacity: 1
                                 }, 500)
-                                $("footer").animate({
+                                $('footer').animate({
                                         opacity: 1
                                 }, 500)
                                     
@@ -39,7 +39,7 @@ $('window').ready(() => {
 
         function zeros(i) {
                 if (i < 10) {
-                    i = "0" + i;
+                    i = '0' + i;
                 }
                 return i;
                 }
@@ -94,37 +94,37 @@ $('window').ready(() => {
         updateClock();
         let timeinterval = setInterval(updateClock, 1000);
 
-        $(".loader-text").delay(500).animate({
+        $('.loader-text').delay(500).animate({
                 opacity: 1
         });
 
-        $(".clock").delay(1000).animate({
+        $('.clock').delay(1000).animate({
                 opacity: 1,
         }, 400);
 
-        $(".btn").delay(1000).animate({
+        $('.btn').delay(1000).animate({
                 opacity: 1
         }, 400);
 
         buttonFiesta.click(() => {
-                $(".main").moveTo(2);
+                $('.main').moveTo(2);
         });
 
         buttonLugar.click(() => {
-                $(".main").moveTo(1);
+                $('.main').moveTo(1);
         });
 
         buttonFiestaBot.click(() => {
-                $(".main").moveTo(2);
+                $('.main').moveTo(2);
         });
 
         buttonRegalo.click(() => {
-                $(".main").moveTo(3);
+                $('.main').moveTo(3);
         });
 
         buttonTop.click(() => {
-                $(".main").moveTo(1);
+                $('.main').moveTo(1);
         });
 
-        $(".main").onepage_scroll();
+        $('.main').onepage_scroll();
 }); 
