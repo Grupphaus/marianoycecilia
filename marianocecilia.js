@@ -1,7 +1,7 @@
 newFunction(); 
 
 function newFunction() {
-        $('window').ready(() => {
+        $('window').ready(function() {
                 let buttonLugar = $('#button-to-lugar');
                 let buttonFiesta = $('#button-to-fiesta');
                 let buttonFiestaBot = $('#button-to-fiesta-bot');
@@ -20,8 +20,8 @@ function newFunction() {
                         e.preventDefault();
                         $('.loader-main').animate({
                                 opacity: 0
-                        }, 400, () => {
-                                $('#loader').slideUp(800, () => {
+                        }, 400, function() {
+                                $('#loader').slideUp(800, function() {
                                         $('#main').animate({
                                                 opacity: 1
                                         }, 600);
@@ -91,19 +91,19 @@ function newFunction() {
                 $('.btn').delay(1000).animate({
                         opacity: 1
                 }, 400);
-                buttonFiesta.click(() => {
+                buttonFiesta.click(function() {
                         $('.main').moveTo(2);
                 });
-                buttonLugar.click(() => {
+                buttonLugar.click(function() {
                         $('.main').moveTo(1);
                 });
-                buttonFiestaBot.click(() => {
+                buttonFiestaBot.click(function() {
                         $('.main').moveTo(2);
                 });
-                buttonRegalo.click(() => {
+                buttonRegalo.click(function() {
                         $('.main').moveTo(3);
                 });
-                buttonTop.click(() => {
+                buttonTop.click(function() {
                         $('.main').moveTo(1);
                 });
                 $('.main').onepage_scroll();
