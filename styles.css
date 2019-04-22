@@ -525,7 +525,7 @@ img {
 }
 
 @media screen and (max-width:1024px) {
-    .intro-text img {
+    .intro-text h2 img {
         width: 30px;
     }
     .footer h5 {

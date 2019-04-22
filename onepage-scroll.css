@@ -29,13 +29,7 @@ body, .onepage-wrapper, html {
 }
 
 .onepage-pagination {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  z-index: 5;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  display: none;
 }
 .onepage-pagination li {
   padding: 0;
