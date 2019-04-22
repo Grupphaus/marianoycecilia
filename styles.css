@@ -182,7 +182,7 @@ main {
 }
 
 .intro {
-    padding: 55px 0 25px 0;
+    padding-top: 55px;
     width: 85%;
     /* position: fixed;
     top: 0;
@@ -216,7 +216,7 @@ main {
 }
 
 #first {
-    height: 53%;
+    height: 60%;
     margin-bottom: 1.5rem;
 }
 
