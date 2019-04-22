@@ -2,12 +2,12 @@ newFunction();
 
 function newFunction() {
         $('window').ready(function() {
-                let buttonLugar = $('#button-to-lugar');
-                let buttonFiesta = $('#button-to-fiesta');
-                let buttonFiestaBot = $('#button-to-fiesta-bot');
-                let buttonRegalo = $('#button-to-regalo');
-                let buttonTop = $('#button-to-top');
-                let vh = window.innerHeight * 0.01;
+                var buttonLugar = $('#button-to-lugar');
+                var buttonFiesta = $('#button-to-fiesta');
+                var buttonFiestaBot = $('#button-to-fiesta-bot');
+                var buttonRegalo = $('#button-to-regalo');
+                var buttonTop = $('#button-to-top');
+                var vh = window.innerHeight * 0.01;
                 // Then we set the value in the --vh custom property to the root of the document
                 document.documentElement.style.setProperty('--vh', `${vh}px`);
                 $('#loader').animate({
@@ -37,17 +37,17 @@ function newFunction() {
                         }
                         return i;
                 }
-                let deadline = ('November 09 2019 20:30:00 GMT-3');
-                let daysSpan = clock.querySelector('.days');
-                let hoursSpan = clock.querySelector('.hours');
-                let minutesSpan = clock.querySelector('.minutes');
-                let secondsSpan = clock.querySelector('.seconds');
+                var deadline = ('November 09 2019 20:30:00 GMT-3');
+                var daysSpan = clock.querySelector('.days');
+                var hoursSpan = clock.querySelector('.hours');
+                var minutesSpan = clock.querySelector('.minutes');
+                var secondsSpan = clock.querySelector('.seconds');
                 function getTimeRemaining(deadline) {
-                        let t = Date.parse(deadline) - Date.parse(new Date());
-                        let seconds = zeros(Math.floor((t / 1000) % 60));
-                        let minutes = zeros(Math.floor((t / 1000 / 60) % 60));
-                        let hours = zeros(Math.floor((t / (1000 * 60 * 60)) % 24));
-                        let days = Math.floor(t / (1000 * 60 * 60 * 24));
+                        var t = Date.parse(deadline) - Date.parse(new Date());
+                        var seconds = zeros(Math.floor((t / 1000) % 60));
+                        var minutes = zeros(Math.floor((t / 1000 / 60) % 60));
+                        var hours = zeros(Math.floor((t / (1000 * 60 * 60)) % 24));
+                        var days = Math.floor(t / (1000 * 60 * 60 * 24));
                         return {
                                 'total': t,
                                 'days': days,
@@ -70,7 +70,7 @@ function newFunction() {
                         }, 1000);
                 }
                 function updateClock() {
-                        let t = getTimeRemaining(deadline);
+                        var t = getTimeRemaining(deadline);
                         daysSpan.innerHTML = t.days;
                         hoursSpan.innerHTML = t.hours;
                         minutesSpan.innerHTML = t.minutes;
@@ -81,7 +81,7 @@ function newFunction() {
                 }
                 initializeClock('clockdiv', deadline);
                 updateClock();
-                let timeinterval = setInterval(updateClock, 1000);
+                var timeinterval = setInterval(updateClock, 1000);
                 $('.loader-text').delay(500).animate({
                         opacity: 1
                 });
