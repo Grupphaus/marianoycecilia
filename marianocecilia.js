@@ -7,9 +7,7 @@ function newFunction() {
                 var buttonFiestaBot = $('#button-to-fiesta-bot');
                 var buttonRegalo = $('#button-to-regalo');
                 var buttonTop = $('#button-to-top');
-                var vh = window.innerHeight * 0.01;
-                // Then we set the value in the --vh custom property to the root of the document
-                document.documentElement.style.setProperty('--vh', `${vh}px`);
+
                 $('#loader').animate({
                         opacity: 1
                 }, 600);
