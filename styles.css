@@ -485,6 +485,11 @@ a:any-link {
     margin: 5px;
 }
 
+.fa-gift, .fa-church, .fa-glass-cheers {
+    font-size: 3rem;
+    color: #b8beac;
+}
+
 b,
 strong {
     font-weight: bolder;
@@ -539,13 +544,6 @@ img {
     .intro-text .p-up {
         font-size: 1.15em;
     }
-    .nombres {
-        margin: 0 10px;
-    }
-    h2.noselect.confirmar {
-        height: 65px;
-        font-size: 3.5em;
-    }
     .fecha {
         font-size: 1.7em;
     }
@@ -561,6 +559,14 @@ img {
 }
 
 @media screen and (max-width: 640px) {
+    .loader-main {
+        width: 90%;
+        height: 95%;
+    }
+
+    .loader-main .loader-text h1 {
+        font-size: 1.7em;
+    }
     .personajes {
         padding: 0 25px;
     }
@@ -570,6 +576,10 @@ img {
     .personajes img:last-of-type {
         width: 60px;
         margin-right: 15px;
+    }
+    .btn-next {
+        width: 125px;
+        font-size: .95em;
     }
 }
 
@@ -586,9 +596,6 @@ img {
     .fecha {
         font-size: 1.5em !important;
     }
-    .container {
-        padding: 0;
-    }
     .intro .imagen {
         height: 230px;
         width: 230px;
@@ -604,9 +611,6 @@ img {
     .intro-text p {
         font-size: .9em;
     }
-    .intro-text .p-up {
-        font-size: .9em;
-    }
     h2.noselect.confirmar {
         font-size: 3em;
     }
@@ -614,19 +618,13 @@ img {
         margin-bottom: 150px;
     }
     .intro-text .detalle-guita {
-        font-size: .6em;
+        font-size: .68em;
     }
 }
 
 @media screen and (max-width:376px) {
-    .fas {
-        margin: 0;
-    }
     #footer {
         height: 0;
-    }
-    .intro {
-        padding: 35px 0
     }
     .intro .imagen {
         height: 175px;
@@ -635,7 +633,10 @@ img {
     .borde-foto {
         height: 223px;
     }
-    div.intro-text:first-of-type {
-        margin-top: 0 !important;
+    .loader-main .loader-text h1 {
+        font-size: 1.4em;
+    }
+    .clock {
+        font-size: .45em;
     }
 }
