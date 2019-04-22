@@ -28,10 +28,10 @@ $('window').ready(() => {
                         $('#loader').slideUp(800, () => {
                                 $('#main').animate({
                                         opacity: 1
-                                }, 500)
+                                }, 600)
                                 $('footer').animate({
                                         opacity: 1
-                                }, 500)
+                                }, 600)
                                     
                         });
                 })
