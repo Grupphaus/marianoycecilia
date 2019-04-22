@@ -182,7 +182,7 @@ main {
 }
 
 .intro {
-    padding: 50px 0 35px 0;
+    padding: 55px 0 25px 0;
     width: 85%;
     /* position: fixed;
     top: 0;
@@ -192,8 +192,8 @@ main {
 }
 
 .intro .imagen {
-    height: 250px;
-    width: 250px;
+    height: 230px;
+    width: 230px;
     border-radius: 100%;
     background-image: url('assets/playa1-edit.JPG');
     background-size: cover;
@@ -216,8 +216,8 @@ main {
 }
 
 #first {
-    height: 50%;
-    margin-bottom: 3.5rem;
+    height: 53%;
+    margin-bottom: 1.5rem;
 }
 
 .intro-text:last-of-type {
@@ -342,7 +342,7 @@ main {
 }
 
 .borde-foto {
-    height: 315px;
+    height: 293px;
     position: absolute;
     animation: rotate 60s linear forwards infinite;
 }
@@ -561,9 +561,15 @@ img {
 @media screen and (max-width: 640px) {
     .loader-main {
         width: 90%;
-        height: 95%;
+        height: 95vh;
     }
-
+    .intro .imagen {
+        height: 175px;
+        width: 175px;
+    }
+    .borde-foto {
+        height: 223px;
+    }
     .loader-main .loader-text h1 {
         font-size: 1.7em;
     }
@@ -596,13 +602,6 @@ img {
     .fecha {
         font-size: 1.5em !important;
     }
-    .intro .imagen {
-        height: 230px;
-        width: 230px;
-    }
-    .borde-foto {
-        height: 292px;
-    }
     .intro-text {
         -webkit-box-shadow: none;
         box-shadow: none;
@@ -625,13 +624,6 @@ img {
 @media screen and (max-width:376px) {
     #footer {
         height: 0;
-    }
-    .intro .imagen {
-        height: 175px;
-        width: 175px;
-    }
-    .borde-foto {
-        height: 223px;
     }
     .loader-main .loader-text h1 {
         font-size: 1.4em;
