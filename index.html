@@ -86,8 +86,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Sanchez:400,400i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <link rel="stylesheet" href="onepage-scroll.css">
     <link rel="stylesheet" href="styles.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="jquery.onepage-scroll.min.js"></script>
 </head>
 
 <body>
@@ -108,9 +110,8 @@
             <button class="btn mb-4"><p>Ver información</p></button>  
         </div>  
     </div>
-    <main id="main">
-        <div class="container d-flex flex-column justify-content-center align-items-center">
-            <div id="main-wrapper" class="wrapper d-flex flex-column align-items-center justify-content-center">
+    <main id="main" class="main container d-flex flex-column justify-content-center align-items-center">
+            <section id="main-wrapper" class="intro-text d-flex flex-column align-items-center justify-content-center">
                 <div class="intro d-flex d-column justify-content-center align-items-center">
                     <div id="imagen" class="imagen d-flex align-items-center justify-content-center"> </div><img class="borde-foto" src="assets/borde-foto.svg" alt=""> </div>
                 <div id="first" class="intro-text text-center d-flex flex-column justify-content-center align-items-center">
@@ -120,35 +121,33 @@
                     <h1 class="fecha">09 · NOV · 2019 <span class="ml-2 mr-2">|</span> 20:30</h1>
                 </div>
                 <button id="button-to-fiesta" class="btn btn-next m-0 d-flex flex-column align-items-center">Fiesta<i class="fas fa-chevron-down m-0"></i></button>
-            </div>
-            <div class="divisor d-flex justify-content-center align-items-center"></div>
-            <div id="fiesta-wrapper" class="intro-text text-center d-flex flex-column justify-content-around align-items-center">
-                <button id="button-to-lugar" class="btn btn-next reverse m-0 d-flex flex-column align-items-center"><i class="fas fa-chevron-up m-0"></i>Lugar y Fecha</button>
+            </section>
+            <section id="fiesta-wrapper" class="intro-text text-center d-flex flex-column justify-content-around align-items-center">
+                <button id="button-to-lugar" class="btn btn-next display-none reverse m-0 d-flex flex-column align-items-center"><i class="fas fa-chevron-up m-0"></i>Lugar y Fecha</button>
                 <div class="mt-4 mb-4 h-75 d-flex align-items-center justify-content-center flex-column">
                     <h2 id="fiesta" class="noselect"><img class="mr-3" src="assets/hojai.svg" alt=""> La Fiesta <img class="ml-3" src="assets/hojad.svg" alt=""></h2>
                     <p class="p-up font-weight-bold"><a href="https://www.espaciomarquez.com.ar/"><span class="font-italic">Espacio Márquez</span></a></p>
                     <p>(Av. Bernabé Márquez 700, San Isidro)</p>
                     <h1 class="fecha mt-4">CONFIRMAR ASISTENCIA</h1>
                 </div>
-                <button id="button-to-regalo" class="btn btn-next m-0 d-flex flex-column align-items-center">Regalo<i class="fas fa-chevron-down m-0"></i></button>
-            </div>
-            <div class="divisor d-flex justify-content-center align-items-center"></div>
-            <div id="regalo-wrapper" class="intro-text text-center d-flex flex-column justify-content-around align-items-center">
-                <button id="button-to-fiesta-bot" class="btn btn-next reverse m-0 d-flex flex-column align-items-center"><i class="fas fa-chevron-up m-0"></i>Fiesta</button>
+                <button id="button-to-regalo" class="btn btn-next display-none m-0 d-flex flex-column align-items-center">Regalo<i class="fas fa-chevron-down m-0"></i></button>
+            </section>
+            <section id="regalo-wrapper" class="intro-text text-center d-flex flex-column justify-content-around align-items-center">
+                <button id="button-to-fiesta-bot" class="btn btn-next display-none reverse m-0 d-flex flex-column align-items-center"><i class="fas fa-chevron-up m-0"></i>Fiesta</button>
                     <div class="mt-4 mb-4 h-75 d-flex align-items-center justify-content-center flex-column">
-                    <h2 id="regalo" class="noselect"> El Regalo </h2>
-                    <p class="guita">Como nuestra <i class="fas fa-home"></i> ya tiene <i class="fas fa-couch"></i> <i class="fas fa-blender"></i> <i class="fas fa-tv"></i> <i class="fas fa-chair"></i></p>
-                    <p class="guita mb-4">si nos quieren <i class="fas fa-gift"></i> algo, nuestro deseo sería <i class="fas fa-dollar-sign"></i> para poder <i class="fas fa-umbrella-beach"></i></p>
-                    <p class="banco font-weight-bold">BANCO NACIÓN</p>
-                    <p class="mb-1">Caja de Ahorro : 91010530327114</p>
-                    <p class="mb-1">CBU : 0110053230005303271147</p>
-                    <p class="mb-1">Alias : marianololo</p>
-                    <p>CUIT : 20341177368</p>
-                    </p>
-                    <p class="guita detalle-guita mt-4 font-italic">Para los colgados: También habrá un buzón en el salón!</p>
-                </div>
-                <button id="button-to-top" class="btn btn-next m-0"><i class="fas fa-angle-double-up"></i></button>
-            </div>
+                        <h2 id="regalo" class="noselect"> El Regalo </h2>
+                        <p class="guita">Como nuestra <i class="fas fa-home"></i> ya tiene <i class="fas fa-couch"></i> <i class="fas fa-blender"></i> <i class="fas fa-tv"></i> <i class="fas fa-chair"></i></p>
+                        <p class="guita mb-4">si nos quieren <i class="fas fa-gift"></i> algo, nuestro deseo sería <i class="fas fa-dollar-sign"></i> para poder <i class="fas fa-umbrella-beach"></i></p>
+                        <p class="banco font-weight-bold">BANCO NACIÓN</p>
+                        <p class="mb-1">Caja de Ahorro : 91010530327114</p>
+                        <p class="mb-1">CBU : 0110053230005303271147</p>
+                        <p class="mb-1">Alias : marianololo</p>
+                        <p>CUIT : 20341177368</p>
+                        </p>
+                        <p class="guita detalle-guita mt-4 font-italic">Para los colgados: También habrá un buzón en el salón!</p>
+                    </div>
+                <button id="button-to-top" class="btn btn-next m-0 display-none"><i class="fas fa-angle-double-up"></i></button>
+            </section>
     </main>
     <footer id="footer">
         <div class="footer noselect">

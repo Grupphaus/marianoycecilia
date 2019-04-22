@@ -1,5 +1,10 @@
 $('window').ready(() => {
 
+        let buttonLugar = $("#button-to-lugar");
+        let buttonFiesta = $("#button-to-fiesta");
+        let buttonFiestaBot = $("#button-to-fiesta-bot");
+        let buttonRegalo = $("#button-to-regalo");
+        let buttonTop = $("#button-to-top");
         let vh = window.innerHeight * 0.01;
         // Then we set the value in the --vh custom property to the root of the document
         document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -99,38 +104,25 @@ $('window').ready(() => {
                 opacity: 1
         }, 400);
 
-        $("#button-to-fiesta").click(() => {
-                $('html, body').animate({
-                        scrollTop: $("#fiesta-wrapper").offset().top
-                    }, 800);
+        buttonFiesta.click(() => {
+                $(".main").moveTo(2);
         });
 
-        $("#button-to-lugar").click(() => {
-                $('html, body').animate({
-                        scrollTop: 0
-                    }, 800);
+        buttonLugar.click(() => {
+                $(".main").moveTo(1);
         });
 
-        $("#button-to-fiesta-bot").click(() => {
-                $('html, body').animate({
-                        scrollTop: $("#fiesta-wrapper").offset().top
-                    }, 800);
+        buttonFiestaBot.click(() => {
+                $(".main").moveTo(2);
         });
 
-        $("#button-to-regalo").click(() => {
-                $('html, body').animate({
-                        scrollTop: $("#regalo-wrapper").offset().top
-                    }, 800);
+        buttonRegalo.click(() => {
+                $(".main").moveTo(3);
         });
 
-        $("#button-to-top").click(() => {
-                $('html, body').animate({
-                        scrollTop: 0
-                    }, 800);
+        buttonTop.click(() => {
+                $(".main").moveTo(1);
         });
 
-        window.addEventListener('resize', () => {
-                let vh = $("window").innerHeight * 0.01;
-                document.documentElement.style.setProperty('--vh', `${vh}px`);
-              });
+        $(".main").onepage_scroll();
 }); 
