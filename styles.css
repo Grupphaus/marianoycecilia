@@ -633,3 +633,25 @@ img {
         font-size: .45em;
     }
 }
+
+@media screen and (max-height: 1024px) {
+    #first {
+        height: 60%;
+        margin-bottom: 5.5rem;
+    }
+    
+    .h-75 {
+        height: 83% !important;
+    }
+    .intro {
+        padding-top: 85px;
+    }
+ 
+    .intro .imagen {
+        height: 260px;
+        width: 260px;
+       }
+    .borde-foto {
+        height: 330px;
+    }    
+}

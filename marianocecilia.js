@@ -1,5 +1,3 @@
-screen.orientation.lock('portrait');
-
 $('window').ready(() => {
 
         let buttonLugar = $('#button-to-lugar');
