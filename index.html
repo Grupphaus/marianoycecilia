@@ -110,47 +110,57 @@
             <button class="btn"><p>Ver información</p></button>  
         </div>  
     </div>
-    <main id="main" class="main container d-flex flex-column justify-content-center align-items-center">
-            <section id="main-wrapper" class="intro-text d-flex flex-column align-items-center justify-content-center">
-                <div class="intro d-flex d-column justify-content-center align-items-center">
-                    <div id="imagen" class="imagen d-flex align-items-center justify-content-center"> </div><img class="borde-foto" src="assets/borde-foto.svg" alt=""> </div>
-                <div id="first" class="intro-text text-center d-flex flex-column justify-content-center align-items-center">
-                    <i class="fas fa-church pb-3"></i>
-                    <p class="p-up font-weight-bold"><a href="https://www.google.com/maps/place/Parroquia+Santuario+San+Ram%C3%B3n+Nonato/@-34.6279912,-58.5015355,15z/data=!4m5!3m4!1s0x0:0xf743321f166ea581!8m2!3d-34.6279912!4d-58.5015355" target="_blank"><span class="font-italic">Santuario San Ramón Nonato</span></a></p>
-                    <p class="mb-4">Cervantes 1150, Capital Federal</p>
-                    <h1 class="fecha">09 · NOV · 2019 <span class="ml-2 mr-2">|</span> 20:30</h1>
-                </div>
-                <button id="button-to-fiesta" class="btn btn-next m-0 d-flex flex-column align-items-center">Fiesta<i class="fas fa-chevron-down m-0"></i></button>
-            </section>
-            <section id="fiesta-wrapper" class="intro-text text-center d-flex flex-column justify-content-around align-items-center">
-                <button id="button-to-lugar" class="btn btn-next display-none reverse m-0 d-flex flex-column align-items-center"><i class="fas fa-chevron-up m-0"></i>Lugar y Fecha</button>
-                <div class="mt-4 mb-4 h-75 d-flex align-items-center justify-content-center flex-column">
-                    <h2 id="fiesta" class="noselect"><img class="mr-3" src="assets/hojai.svg" alt=""> La Fiesta <img class="ml-3" src="assets/hojad.svg" alt=""></h2>
-                    <i class="fas fa-glass-cheers pt-2 pb-3"></i>
-                    <p class="p-up font-weight-bold"><a href="https://www.google.com/maps/place/Espacio+Marquez+.+San+Isidro/@-34.4792462,-58.5199445,15z/data=!4m2!3m1!1s0x0:0xb234715b2850abfb?sa=X&ved=2ahUKEwiOz8TaqeThAhVFH7kGHd6rBmcQ_BIwFnoECAoQCA" target="_blank"><span class="font-italic">Espacio Márquez I</span></a></p>
-                    <p>Av. Bernabé Márquez 700<br>(Hipódromo de San Isidro)</p>
-                    <h1 class="fecha mt-4">CONFIRMAR ASISTENCIA</h1>
-                </div>
-                <button id="button-to-regalo" class="btn btn-next display-none m-0 d-flex flex-column align-items-center">Regalo<i class="fas fa-chevron-down m-0"></i></button>
-            </section>
-            <section id="regalo-wrapper" class="intro-text text-center d-flex flex-column justify-content-around align-items-center">
-                <button id="button-to-fiesta-bot" class="btn btn-next display-none reverse m-0 d-flex flex-column align-items-center"><i class="fas fa-chevron-up m-0"></i>Fiesta</button>
-                    <div class="mt-4 mb-4 h-75 d-flex align-items-center justify-content-center flex-column">
-                        <h2 id="regalo" class="noselect"><img class="mr-3" src="assets/hojai.svg" alt=""> El Regalo <img class="ml-3" src="assets/hojad.svg" alt=""></h2>
-                        <i class="fas fa-gift pt-2 pb-3"></i>
-                        <p class="guita">SI QUERÉS REGALARNOS ALGO:<br>
-                            Podés ayudarnos con nuestra Luna de Miel
-                            realizando un depósito a nuestra cuenta.</p>
-                        <p class="guita mb-4">¡Muchas Gracias!</p>
-                        <p class="guita detalle-guita mb-4 font-italic">Para los colgados: También habrá un buzón en el salón!</p>
-                        <p class="banco font-weight-bold">BANCO NACIÓN</p>
-                        <p class="mb-1">Caja de Ahorro : 91010530327114</p>
-                        <p class="mb-1">CBU : 0110053230005303271147</p>
-                        <p class="mb-1">Alias : marianololo</p>
-                        <p>CUIT : 20341177368</p>
-                        </p>
+    <main id="main" class="main container">
+            <section id="main-wrapper" class="intro-text text-center">
+                <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                    <div class="intro d-flex d-column justify-content-center align-items-center">
+                        <div id="imagen" class="imagen"></div>
+                        <img class="borde-foto" src="assets/borde-foto.svg" alt="">
                     </div>
-                <button id="button-to-top" class="btn btn-next m-0 display-none"><i class="fas fa-angle-double-up"></i></button>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                        <i class="fas fa-church pb-3"></i>
+                        <p class="p-up font-weight-bold"><a
+                                href="https://www.google.com/maps/place/Parroquia+Santuario+San+Ram%C3%B3n+Nonato/@-34.6279912,-58.5015355,15z/data=!4m5!3m4!1s0x0:0xf743321f166ea581!8m2!3d-34.6279912!4d-58.5015355"
+                                target="_blank"><span class="font-italic">Santuario San Ramón Nonato</span></a></p>
+                        <p class="mb-4">Cervantes 1150, Capital Federal</p>
+                        <h1 class="fecha mb-4">09 · NOV · 2019 <span class="ml-2 mr-2">|</span> 20:30</h1>
+                    </div>
+                    <button id="button-to-fiesta" class="btn btn-next m-0 d-flex flex-column align-items-center">Fiesta<i class="fas fa-chevron-down m-0"></i></button>
+                </div>
+                </section>
+                <section id="fiesta-wrapper" class="intro-text text-center">
+                    <div class="d-flex flex-column align-items-center justify-content-center h-100">
+                        <button id="button-to-lugar" class="btn btn-next reverse m-0 d-flex flex-column align-items-center"><i class="fas fa-chevron-up m-0"></i>Lugar y Fecha</button>
+                        <div class="h-100 d-flex align-items-center justify-content-center flex-column">
+                            <h2 id="fiesta" class="noselect"><img class="mr-3" src="assets/hojai.svg" alt=""> La Fiesta <img class="ml-3" src="assets/hojad.svg" alt=""></h2>
+                            <i class="fas fa-glass-cheers pt-2 pb-3"></i>
+                            <p class="p-up font-weight-bold"><a href="https://www.google.com/maps/place/Espacio+Marquez+.+San+Isidro/@-34.4792462,-58.5199445,15z/data=!4m2!3m1!1s0x0:0xb234715b2850abfb?sa=X&ved=2ahUKEwiOz8TaqeThAhVFH7kGHd6rBmcQ_BIwFnoECAoQCA" target="_blank"><span class="font-italic">Espacio Márquez I</span></a></p>
+                            <p>Av. Bernabé Márquez 700<br>(Hipódromo de San Isidro)</p>
+                            <h1 class="fecha mt-4">CONFIRMAR ASISTENCIA</h1>
+                        </div>
+                        <button id="button-to-regalo" class="btn btn-next m-0 d-flex flex-column align-items-center">Regalo<i class="fas fa-chevron-down m-0"></i></button>
+                    </div>    
+                </div>
+            </section>
+            <section id="regalo-wrapper" class="intro-text text-center">
+                <div class="d-flex flex-column align-items-center justify-content-between h-100">
+                    <button id="button-to-fiesta-bot" class="btn btn-next reverse m-0 d-flex flex-column align-items-center"><i class="fas fa-chevron-up m-0"></i>Fiesta</button>
+                        <div class="mt-4 mb-4 h-75 d-flex align-items-center justify-content-center flex-column">
+                            <i class="fas fa-gift pb-3"></i>
+                            <p class="guita">SI QUERÉS REGALARNOS ALGO:<br>
+                                Podés ayudarnos con nuestra Luna de Miel
+                                realizando un depósito a nuestra cuenta.</p>
+                            <p class="guita mb-4">¡Muchas Gracias!</p>
+                            <p class="guita detalle-guita mb-4 font-italic">Para los colgados: También habrá un buzón en el salón!</p>
+                            <p class="banco font-weight-bold">BANCO NACIÓN</p>
+                            <p class="mb-1">Caja de Ahorro : 91010530327114</p>
+                            <p class="mb-1">CBU : 0110053230005303271147</p>
+                            <p class="mb-1">Alias : marianololo</p>
+                            <p>CUIT : 20341177368</p>
+                            </p>
+                        </div>
+                    <button id="button-to-top" class="btn btn-next m-0"><i class="fas fa-angle-double-up"></i></button>
+                </div>
             </section>
     </main>
     <footer id="footer">

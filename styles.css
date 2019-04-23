@@ -197,12 +197,6 @@ main {
 
 .intro {
     padding-top: 55px;
-    width: 85%;
-    /* position: fixed;
-    top: 0;
-    overflow: hidden;
-    background: #fdfdfc;
-    z-index: 5; */
 }
 
 .intro .imagen {
@@ -230,14 +224,7 @@ main {
 }
 
 #first {
-    height: 60%;
     margin-bottom: 1.5rem;
-}
-
-.intro-text:last-of-type {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    width: 100%;
 }
 
 .intro-text h2 {
@@ -616,6 +603,12 @@ img {
 }
 
 @media screen and (max-width:468px) {
+    #first {
+        margin-bottom: 0;
+    }
+    .intro {
+        padding-top: 40px;
+    }
     .personajes {
         padding: 0;
     }
