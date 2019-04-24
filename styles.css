@@ -309,6 +309,10 @@ main {
     padding: 18px;
 }
 
+#button-to-lugar, #button-to-fiesta-bot {
+    border-radius: 0 0 4px 4px;
+}
+
 .fecha {
     width: -webkit-max-content;
     width: -moz-max-content;
@@ -549,6 +553,8 @@ img {
 }
 
 @media screen and (max-width:468px) {
+    .intro {
+        margin-top: 45px;
     #first {
         margin-bottom: 0;
     }
