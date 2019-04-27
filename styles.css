@@ -265,7 +265,7 @@ main {
     background-color: #fdfdfc;
     opacity: 0;
     width: 200px;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
 }
 
 .btn:hover {
@@ -518,6 +518,7 @@ img {
     .loader-main {
         width: 90%;
         height: 95vh;
+        padding-bottom: 2.5rem;
     }
     .intro .imagen {
         height: 175px;
@@ -585,7 +586,7 @@ img {
         font-size: 2.5rem;
     }
     .clock {
-        font-size: .35em;
+        font-size: .4em;
     }
     .btn:not(.btn-next) {
         width: 150px;
