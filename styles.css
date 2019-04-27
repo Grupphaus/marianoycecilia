@@ -590,6 +590,7 @@ img {
     }
     .btn:not(.btn-next) {
         width: 150px;
+        margin-bottom: 85px;
     }
     .btn-next {
         font-size: .85em;
