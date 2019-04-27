@@ -441,12 +441,6 @@ a:any-link {
     transition: all 200ms ease-in-out;
 }
 
-/** * Add the correct font weight in Chrome, Edge, and Safari. */
-
-.fas {
-    margin: 5px;
-}
-
 .fa-gift, .fa-church, .fa-glass-cheers {
     font-size: 3rem;
     color: #b8beac;
@@ -499,7 +493,7 @@ img {
         letter-spacing: 10px;
     }
     .intro-text h2 {
-        font-size: 4em;
+        font-size: 3.6em;
         margin: 0;
     }
     .intro-text p,
@@ -555,6 +549,7 @@ img {
 @media screen and (max-width:468px) {
     .intro {
         margin-top: 45px;
+    }
     #first {
         margin-bottom: 0;
     }
@@ -576,7 +571,7 @@ img {
         margin: 0;
     }
     .intro-text p {
-        font-size: .9em;
+        font-size: .8em;
     }
     h2.noselect.confirmar {
         font-size: 3em;
@@ -587,9 +582,15 @@ img {
     .intro-text .detalle-guita {
         font-size: .68em;
     }
+    .fa-gift, .fa-church, .fa-glass-cheers {
+        font-size: 2.5rem;
+    }
 }
 
-@media screen and (max-width:376px) {
+@media screen and (max-width:350px) {
+    .intro {
+        margin-top: 40px;
+    }
     #footer {
         height: 0;
     }
@@ -598,5 +599,24 @@ img {
     }
     .clock {
         font-size: .45em;
+    }
+    .intro .imagen {
+        height: 150px;
+        width: 150px;
+    }
+    .borde-foto {
+        height: 190px;
+    }
+    .personajes img {
+        width: 65px;
+    }
+    .personajes img:last-of-type {
+        width: 50px;
+    }
+    .fecha {
+        font-size: 1.4em;
+    }
+    .fa-gift, .fa-church, .fa-glass-cheers {
+        font-size: 2.2em;
     }
 }
