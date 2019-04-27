@@ -265,7 +265,7 @@ main {
     background-color: #fdfdfc;
     opacity: 0;
     width: 200px;
-    margin-bottom: 4rem;
+    margin-bottom: 5rem;
 }
 
 .btn:hover {
@@ -518,7 +518,6 @@ img {
     .loader-main {
         width: 90%;
         height: 95vh;
-        padding-bottom: 3.5rem;
     }
     .intro .imagen {
         height: 175px;
@@ -585,6 +584,15 @@ img {
     .fa-gift, .fa-church, .fa-glass-cheers {
         font-size: 2.5rem;
     }
+    .clock {
+        font-size: .35em;
+    }
+    .btn:not(.btn-next) {
+        width: 150px;
+    }
+    .btn-next {
+        font-size: .85em;
+    }
 }
 
 @media screen and (max-width:350px) {
@@ -596,9 +604,6 @@ img {
     }
     .loader-main .loader-text h1 {
         font-size: 1.4em;
-    }
-    .clock {
-        font-size: .35em;
     }
     .intro .imagen {
         height: 150px;
