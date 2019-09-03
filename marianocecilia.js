@@ -10,7 +10,7 @@ function newFunction() {
                 let buttonRegalo = $('#button-to-regalo');
                 let buttonTop = $('#button-to-top');
                 // Countdown elements:
-                let deadline = ('November 09 2019 20:30:00 GMT-3');
+                let deadline = ('November 09 2019 20:00:00 GMT-3');
                 let daysSpan = clock.querySelector('.days');
                 let hoursSpan = clock.querySelector('.hours');
                 let minutesSpan = clock.querySelector('.minutes');
