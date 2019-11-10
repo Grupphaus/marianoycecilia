@@ -25,21 +25,8 @@ function newFunction() {
                 buttonTop.click(() => {
                         $('.main').moveTo(1);
                 });
-                // Countdown elements:
-
-
-                $('#loader').animate({
-                        opacity: 1
-                }, 600);
-
 
                 $("body").css("background-image", "url('assets/leaves.png')");
-                $('#main').animate({
-                    opacity: 1
-                }, 800);
-                $('footer').animate({
-                    opacity: 1
-                }, 800);
 
                 function cycleImages(){
                         var $active = $('#cycler .active');
