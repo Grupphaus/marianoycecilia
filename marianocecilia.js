@@ -2,13 +2,29 @@ newFunction();
 
 function newFunction() {
         $('window').ready(() => {
-
+                $('.main').onepage_scroll();
                 // Buttons:
                 let buttonLugar = $('#button-to-lugar');
                 let buttonFiesta = $('#button-to-fiesta');
                 let buttonFiestaBot = $('#button-to-fiesta-bot');
                 let buttonRegalo = $('#button-to-regalo');
                 let buttonTop = $('#button-to-top');
+                
+                buttonFiesta.click(() => {
+                        $('.main').moveTo(2);
+                });
+                buttonLugar.click(() => {
+                        $('.main').moveTo(1);
+                });
+                buttonFiestaBot.click(() => {
+                        $('.main').moveTo(2);
+                });
+                buttonRegalo.click(() => {
+                        $('.main').moveTo(3);
+                });
+                buttonTop.click(() => {
+                        $('.main').moveTo(1);
+                });
                 // Countdown elements:
                 let deadline = ('November 09 2019 20:00:00 GMT-3');
                 let daysSpan = clock.querySelector('.days');
@@ -105,22 +121,6 @@ function newFunction() {
                 $('.btn').delay(1000).animate({
                         opacity: 1
                 }, 400);
-                buttonFiesta.click(() => {
-                        $('.main').moveTo(2);
-                });
-                buttonLugar.click(() => {
-                        $('.main').moveTo(1);
-                });
-                buttonFiestaBot.click(() => {
-                        $('.main').moveTo(2);
-                });
-                buttonRegalo.click(() => {
-                        $('.main').moveTo(3);
-                });
-                buttonTop.click(() => {
-                        $('.main').moveTo(1);
-                });
-                $('.main').onepage_scroll();
         });
 }
 
