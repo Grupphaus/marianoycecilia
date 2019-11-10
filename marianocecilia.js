@@ -21,23 +21,13 @@ function newFunction() {
                 }, 600);
 
 
-                // Displays main content after clicking on "Ver información" button
-                $('.btn').click((e) => {
-                        e.preventDefault();
-                        $('.loader-main').animate({
-                                opacity: 0
-                        }, 400, () => {
-                                $('#loader').slideUp(800, () => {
-                                        $("body").css("background-image", "url('assets/leaves.png')");
-                                        $('#main').animate({
-                                                opacity: 1
-                                        }, 800);
-                                        $('footer').animate({
-                                                opacity: 1
-                                        }, 800);
-                                });
-                        });
-                });
+                $("body").css("background-image", "url('assets/leaves.png')");
+                $('#main').animate({
+                    opacity: 1
+                }, 800);
+                $('footer').animate({
+                    opacity: 1
+                }, 800);
 
                 function cycleImages(){
                         var $active = $('#cycler .active');
